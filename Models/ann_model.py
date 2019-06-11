@@ -1,19 +1,10 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Mar 18 00:43:53 2019
-
-@author: nileshprasad137
-"""
-
-# Random Forest Classification
-
 # Importing the libraries
 import numpy as np
 import pandas as pd
 import pickle
 from sklearn.model_selection import train_test_split
 #%%
+
 # Importing the dataset
 dataset = pd.read_csv('../dataset/appended/DSL-StrongPasswordData.csv')
 
@@ -172,4 +163,5 @@ print("jaccard_similarity_score :: ",f1_score(y_test,y_pred,average="weighted"))
 # 
 # =============================================================================
 
+#Saving model 
 estimator.model.save("../saved-models/ann.h5")
