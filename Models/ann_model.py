@@ -29,13 +29,13 @@ for subject in subjects:
     imposter_data = dataset.loc[dataset.subject != subject, :]   
     # Not used Currently     
     #   Uncomment Below lines when you need to set first 300 of each user as training    
-#    user_train_X = genuine_user_data_X[:300].values    
+#    user_train_X = genuine_user_data_X[:500].values    
 #    X_train = np.append(X_train,user_train_X,axis=0)
-#    user_test_X = genuine_user_data_X[300:].values
+#    user_test_X = genuine_user_data_X[500:].values
 #    X_test=np.append(X_test,user_test_X,axis=0)
-#    user_train_Y = genuine_user_data_Y[:300].values
+#    user_train_Y = genuine_user_data_Y[:500].values
 #    y_train=np.append(y_train,user_train_Y,axis=0)    
-#    user_test_Y = genuine_user_data_Y[300:].values
+#    user_test_Y = genuine_user_data_Y[500:].values
 #    y_test=np.append(y_test,user_test_Y,axis=0)        
     user_train_X, user_test_X, user_train_Y, user_test_Y = train_test_split(user_X, user_Y, test_size = 0.25, random_state = 0)
     X_train = np.append(X_train,user_train_X,axis=0)
